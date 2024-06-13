@@ -107,8 +107,8 @@ if page == "EDA and Model Training":
 
         # Create a scatter plot
         fig = px.scatter(df_plot, x='age', y='bili', trendline = 'ols',
-                        title='Bili Levels Across Age',
-                        labels={'bili': 'Bili Level', 'age': 'Age'})
+                        title='Bilirubin Levels Across Age',
+                        labels={'Bilirubin': 'Bilirubin Level', 'age': 'Age'})
         st.plotly_chart(fig)
 
 
@@ -175,7 +175,7 @@ elif page == "Prediction":
     scaler = joblib.load('scaler.pkl')
 
     with st.form(key='my_form'):
-        age = st.number_input(label='Enter age', step=1)
+        age = st.number_input(label='Enter age', step=1 , min_value=18, max_value=100, value=30)
         gender = st.selectbox('Select gender (1=male, 2= female)', options=[1, 2])
         steroid = st.selectbox('Steroid use (1= yes, 2= no)', options=[1, 2])
         antivirals = st.selectbox('Antivirals use (1= yes, 2= no)', options=[1, 2])
@@ -188,7 +188,7 @@ elif page == "Prediction":
         spiders = st.selectbox('Spiders (1= yes, 2= no)', options=[1, 2])
         ascites = st.selectbox('Ascites (1= yes, 2= no)', options=[1, 2])
         varices = st.selectbox('Varices (1= yes, 2= no)', options=[1, 2])
-        bili = st.number_input(label='Enter bili level')
+        bili = st.number_input(label='Enter bilirubin level')
         alk = st.number_input(label='Enter alk level', step=1)
         sgot = st.number_input(label='Enter sgot level', step=1)
         albu = st.number_input(label='Enter albu level')
