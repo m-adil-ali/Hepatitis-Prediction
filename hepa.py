@@ -221,8 +221,18 @@ elif page == "Prediction":
         #st.write("Input to Logistic Regression: ", user_input.shape)
         
         prediction = model.predict(full_input_scaled)
-        st.write(f'Prediction is (1 means DIE, 2 means LIVE): =  {prediction}')
-    
+        st.write('---')
+        st.write('### Predictions based on your given input data:')
+        if prediction == 2:
+            st.write("You are not likely to have hepatitis and you will survive.")
+        else:
+            st.write("You are likely to to have hepatitis and you may not survive as per this model.")
+        
+        prediction_proba = model.predict_proba(full_input_scaled)
+        st.subheader('Prediction Probability')
+        st.write('1 means likelihood to survive and 0 means likelihood to not survive')
+        st.write(prediction_proba)
+        
 
     
 elif page == "Hepatitis Awareness":
