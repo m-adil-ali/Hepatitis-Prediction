@@ -24,7 +24,7 @@ if page == "EDA and Model Training":
     st.title("Hepatitis Awareness and Prediction")
     st.image("data/hepatitis.jpg")
 
-    st.write("If you want to know more about the Hepatitis dataset, here is the [link](https://www.kaggle.com/datasets/mragpavank/hepatitis-dataset)")
+    st.write("If you want to know more about the Hepatitis dataset, here is the [link](https://www.kaggle.com/datasets/mragpavank/hepatitis-dataset)\nIn this project I have trained the Hepatits dataset to build some models with Supervised ML techniques. The model is used to predict heaptitis cases by getting real time inputs from users. Its for the learning purpose and trained on very small dataset so it does not mean you really have hepatitis when it predicts.")
     file = "data/hepatitis.csv"
 
     if file is not None:
