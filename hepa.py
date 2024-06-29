@@ -22,7 +22,7 @@ if page == "EDA and Model Training":
 
     # Load the dataset
     st.title("Hepatitis Awareness and Prediction")
-    st.image("data\hepatitis.jpg")
+    st.image("data/hepatitis.jpg")
 
     st.write("If you want to know more about the Hepatitis dataset, here is the [link](https://www.kaggle.com/datasets/mragpavank/hepatitis-dataset)")
     file = "data/hepatitis.csv"
