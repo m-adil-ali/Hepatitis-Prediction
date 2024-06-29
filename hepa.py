@@ -25,7 +25,7 @@ if page == "EDA and Model Training":
     st.image("data/hepatitis.jpg")
 
     st.write("""
-                In this project I have trained the Hepatits dataset to build some models with Supervised ML techniques. The model is used to predict heaptitis cases by getting real time inputs from users.
+                In this project I have trained the Hepatits dataset to build some models with Supervised ML techniques. The best perfoming model is used to predict heaptitis cases by getting real time inputs from users.
                 Its for the learning purpose and trained on very small dataset so it does not mean you really have hepatitis when it predicts.
                 If you want to know more about the Hepatitis dataset, here is the [link](https://www.kaggle.com/datasets/mragpavank/hepatitis-dataset).""")
     file = "data/hepatitis.csv"
